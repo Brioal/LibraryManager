@@ -1,0 +1,71 @@
+/**
+ * 功能类
+ * 1.仿美团城市选择
+ * 2.滑动返回
+ *
+ * activity
+ * 1.WevView封装类（包含链接复制，系统分享）
+ *
+ * 工具类
+ * 1.沉浸状态栏处理
+ * 2.获取文字的首字符大写
+ * 3.吐司工具
+ * 4.DemoManager工具
+ * <p>
+ * sdk
+ * 1.butterknie
+ * 2.Bmob sdk
+ * 3.gson
+ * 4.jsoup
+ * 5.okhttp
+ * 6.okio
+ * 7.glide 图片加载
+ *
+ * view
+ * 1.circleview
+ * 2.circleHead
+ */
+
+/**防美团城市选择：
+ * 启动CityActivity ， 重写onActivityResult接受 City 字段的返回的城市名称
+ *
+ */
+
+/**滑动返回
+ * 继承SwipeActivity即可
+ *
+ */
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile files('libs/AMap_Location_v2.3.0_20160112.jar')
+    compile files('libs/BmobSDK_V3.4.6_0415.jar')
+    compile files('libs/butterknife-7.0.1.jar')
+    compile files('libs/glide-3.5.1.jar')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/jsoup-1.9.1.jar')
+    compile files('libs/okhttp-2.4.0.jar')
+    compile files('libs/okio-1.4.0.jar')
+    compile 'com.android.support:design:23.3.0'
+}
